@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>學校平板管理後台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>📱 學校平板管理系統</h1>
+  <p>即時管理校內平板狀態</p>
+</header>
+
+<section class="panel">
+  <h2>➕ 新增平板</h2>
+  <div class="form">
+    <input id="code" placeholder="平板編號（如 iPad-01）" />
+    <input id="owner" placeholder="使用班級 / 老師" />
+    <input id="location" placeholder="存放地點（教室 / 資訊組）" />
+    <select id="status">
+      <option>正常</option>
+      <option>借出</option>
+      <option>故障</option>
+      <option>停用</option>
+    </select>
+    <input id="battery" type="number" placeholder="電量 %" value="100" />
+    <button onclick="addTablet()">新增</button>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>📋 平板清單</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>編號</th>
+        <th>使用者</th>
+        <th>狀態</th>
+        <th>電量</th>
+        <th>地點</th>
+        <th>更新時間</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
